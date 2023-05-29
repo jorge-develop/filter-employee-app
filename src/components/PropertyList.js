@@ -5,7 +5,7 @@ const PropertyList = ({ employees }) => {
   const renderEmployeeList = () => {
     if (employees.length === 0) {
       return (
-        <div className="propertylisting_card ">
+        <div className="propertylisting_card">
           <div className="propertylisting_container ">
             <h2 className="propertylisting_title">
               Sorry no one has that name.
@@ -25,17 +25,7 @@ const PropertyList = ({ employees }) => {
     }
   };
 
-  return (
-    <div
-      style={{
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent: "center",
-      }}
-    >
-      {renderEmployeeList()}
-    </div>
-  );
+  return <div className="propertyList">{renderEmployeeList()}</div>;
 };
 
 export default PropertyList;

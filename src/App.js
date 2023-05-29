@@ -26,7 +26,7 @@ const App = () => {
 
   return (
     <div>
-      <div style={{ marginTop: "2%", padding: "10%" }}>
+      <div style={{ marginTop: "1%", padding: "10%" }}>
         <SearchBar
           setSearchTerm={setSearchTerm}
           setGenderFilter={setGenderFilter}

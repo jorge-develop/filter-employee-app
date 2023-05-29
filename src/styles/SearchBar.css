@@ -37,3 +37,21 @@
 .search-button:focus {
   background-color: #f3005878;
 }
+
+@media screen and (max-width: 800px) {
+  .search-bar {
+    display: inline-block;
+    margin: none;
+  }
+  .search-button {
+    margin: 5px;
+    width: 100%;
+    font-size: 20px;
+  }
+  .search-input {
+    border-radius: 5px;
+    margin: 7px;
+    font-size: 20px;
+    width: 90%;
+  }
+}
