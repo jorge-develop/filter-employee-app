@@ -6,7 +6,7 @@ const color_p = {
   textShadow: "2px 2px 4px #000000",
 };
 
-const PropertyListing = ({ employee }) => {
+const Employee = ({ employee }) => {
   return (
     <div className={`propertylisting_card`}>
       <div className="propertylisting_container">
@@ -58,4 +58,4 @@ const PropertyListing = ({ employee }) => {
   );
 };
 
-export default PropertyListing;
+export default Employee;

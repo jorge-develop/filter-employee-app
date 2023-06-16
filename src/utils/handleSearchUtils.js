@@ -1,7 +1,6 @@
 export function filterEmployees(employees, searchTerm) {
-  console.log(searchTerm);
-  return employees.filter(employee => {
-    const fullName = `${employee.firstName} ${employee.lastName}`;
+  return employees?.filter(employee => {
+    const fullName = `${employee?.firstName} ${employee?.lastName}`;
     return fullName.toLowerCase().includes(searchTerm.toLowerCase());
   });
 }

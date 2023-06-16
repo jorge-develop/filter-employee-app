@@ -1,9 +1,9 @@
 import React from "react";
-import PropertyListing from "./PropertyListing";
+import Employee from "./Employee";
 
-const PropertyList = ({ employees }) => {
+const EmployeeList = ({ employees }) => {
   const renderEmployeeList = () => {
-    if (employees.length === 0) {
+    if (employees?.length === 0) {
       return (
         <div className="propertylisting_card">
           <div className="propertylisting_container ">
@@ -19,8 +19,8 @@ const PropertyList = ({ employees }) => {
         </div>
       );
     } else {
-      return employees.map((employee, i) => (
-        <PropertyListing key={i} employee={employee} />
+      return employees?.map((employee, i) => (
+        <Employee key={i} employee={employee} />
       ));
     }
   };
@@ -28,4 +28,4 @@ const PropertyList = ({ employees }) => {
   return <div className="propertyList">{renderEmployeeList()}</div>;
 };
 
-export default PropertyList;
+export default EmployeeList;

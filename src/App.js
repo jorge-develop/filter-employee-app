@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import SearchBar from "./components/SearchBar";
-import PropertyList from "./components/PropertyList";
+import EmployeeList from "./components/EmployeeList";
 import { useFetchData } from "./hooks/useFetchData.js";
 import { filterEmployees, filteredByGender } from "./utils/handleSearchUtils";
 
@@ -10,8 +10,7 @@ const App = () => {
   const [data, loading, error] = useFetchData(url);
   const [searchTerm, setSearchTerm] = useState("");
   const [genderFilter, setGenderFilter] = useState("");
-
-  if (!loading) {
+  if (loading) {
     return "loading...";
   }
 
@@ -19,7 +18,7 @@ const App = () => {
     return error + " ...";
   }
 
-  const filteredAllEmployees = filterEmployees(data.users, searchTerm);
+  const filteredAllEmployees = filterEmployees(data?.users, searchTerm);
   const filteredBySelectedGender = genderFilter
     ? filteredByGender(filteredAllEmployees, genderFilter)
     : filteredAllEmployees;
@@ -31,7 +30,7 @@ const App = () => {
           setSearchTerm={setSearchTerm}
           setGenderFilter={setGenderFilter}
         />
-        <PropertyList employees={filteredBySelectedGender} />
+        <EmployeeList employees={filteredBySelectedGender} />
       </div>
     </div>
   );
